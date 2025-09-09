@@ -1,0 +1,131 @@
+✅---Setup---
+$git config --global user.name "Username"
+$git config --global user.email "UserEmail@gmail.com"
+$git config --list
+
+
+
+✅---Terminal commands---
+$pwd	//print working directory
+$mkdir project1	// make diretory project1
+$touch	greet.txt	// create file greet.txt
+$echo hello >> greet.txt	// enter text "hello" to content into file greet.txt
+$cd project1/		//change directory to project1
+$ls 	// list all items
+$ls -al 	// list all items including hidden items and pointers also
+
+
+
+✅---Git Repo---
+$git init	// initialize dir as git repo
+$git status	// to see the repo is git repo or not && to see the modified/untracked files of the git repo
+$git diff greet.txt 	// show what changes do this greet.txt has
+
+
+
+✅---Clone Remote Repo to Local---
+$git clone https://github.com/anilsolanki9/my-basic-html-portfolio.git new_folder_name
+
+
+
+✅---History of Git Repo---
+$git log	//show commits info (commit id, author, date, commit msg, head)
+$git log -3 	// show latest 3 commits log
+$git log -p 	// git log && git diff together
+$git log --oneline 	// short commit logs (short comit id, head, commit message)
+$git log --stat		// git log && (insertions / deletions of files +x -y etc.)
+$git show 1cb285b9ab12efe43259ab595206cdc0e22be3ac	// git log -p, of the perticular commit. (log && diff info)
+
+
+
+✅--Commiting the Changes---
+$git add filename.xyz		//add file to track and stage index (if new) OR add file to stage index (if already tracked)
+$git commit -m "This is the commit message text"
+---Commit and add together in one command---
+$git commmit -am "This is my new commit message"	//this will add all modified files to stage index, then commit all changes.
+
+
+
+✅---Undo changes---
+$git restore filename.xyz	//This will restore the modified file to the previour commit, and remove all working directory changes.
+
+
+
+✅---Ignore changes of file .gitignore---
+V.1: Jis file ko ignore krna hai, woh abhi tracked nahi hai. (Recommended)
+$mkdir project1
+$cd project1
+$git init
+$touch .gitignore 	//create .gitignore file
+$echo filename.xyz >> .gitignore 	// enter text filename.xyz to the .gitignore file
+$git add .gitignore 	//add .gitignore to the stage index
+$git commit -m "added .gitignore to ignore filename.xyz"	//gitignore ko commit bhi kr do
+$git check-ignore -v filename.xyz	//to varify if file is getting ignored or not/
+V.2: Jis file ko ignore krvana hai woh pahle se tracked ya commited hai
+$echo filename.xyz >> .gitignore 	 // Gitignore me file add kr do
+$git add .gitignore 	///.gitignore ko staging index me dal do
+$git commit -m "added .gitignore to ignore filename.xyz"	//commit kr do
+$git rm --cached filename.xyz		// file ko track/index se htao, sirf local pe rhegi
+$git commit -m "Stop tracking filename.xyz" 	// commit kr do
+$git check-ignore -v filename.xyz	//varify kr do
+
+
+
+✅---Branches---
+$git branch	//list all the branches, also show the current branch 
+$git branch xyz1newBranch 	// create new branch with name xyz1newBranch
+$git checkout xyz1newBranch	// switch to xyz1newBranch branch
+(add new features -> commit changes -> switch to master)
+$git checkout master 	// switch to master branch, and the commit of xyz1newBranch branch will not be visible in master branch.
+$git merge xyz1newBranch	// merge xyz1newBranch branch to current branch (master branch)
+$git branch -d xyz1newBranch	// delete the xyz1newBranch branch 
+(If get merge conflict on merging) resolve -> add file to stage which got conflict -> commit changes
+
+
+
+✅---Tagging---
+$git tag -a betaV1.0 464ec33909aaa8091a78c3c8dae3ba18b43ffe7f -m "My Beta Release V1.0"		// This will add the tag betaV1.0 to the commit
+$git tag -d betaV1.0		// remove the tag betaV1.0 from commit
+
+
+
+✅---Git stash---
+$git stash 	//move all local working dir changes to a safe stash area 
+$git stash list 	// to view stash details
+$git pull 	// pull latest commits from remote to local
+$git stash apply 	// re-apply stashed changed into working directory
+$git push -u origine master 	// push local changes to remote repo, use master or main according to your root branch. 
+
+
+
+✅---Undo Git Commit---
+$git commit --amend 	// it is used to ammend last commits commit message, pree "I" to enter text, press "esc+ : + wq + enter" to exit.
+$git revert 464ec33909aaa8091a78c3c8dae3ba18b43ffe7f 		// this will revert the commit of given commit id, press "esc+ : + wq + enter" to exit.
+$git reset --soft 464ec33909aaa8091a78c3c8dae3ba18b43ffe7f 	// this will remove all commits till the given SHAid, and move HEAD to this commit, changes of working directory are kept intact, and modifications show as stagged
+$git reset --mixed 464ec33909aaa8091a78c3c8dae3ba18b43ffe7f 	// this will remove all commits till the given SHAid, and move HEAD to this commit, changes of working directory are kept intact, but modifications show as unstagged. 
+$git reset --hard 464ec33909aaa8091a78c3c8dae3ba18b43ffe7f 	// this will remove all commits till the given SHAid, and move HEAD to this commit, changes of working directory are Discarded. (NOT Recommended)
+ 
+
+
+✅---Git Push---
+At remote create a empty repositery
+At local 
+$mkdir repo1
+$git init 
+$touch README.md
+$echo This is my project repo >> README.md
+$git add README.md
+$git commit -m "Initial Commit"
+$git remote add origin https://github.com/anilsolanki9/repoName
+$git config --global user.name "userName"
+$git config --global user.email "userEmail"
+$git config --list
+$git push -u origin main
+--> May you get error at first time, it will ask for username and password 
+--> Username : yourGithubAccUsername
+--> Password : (Not your github acc pass) for this 
+Settings> Developer Settings> Personal token Access> Token Classis > Generate New Token (Classic) > Write any name > Set No expiry > Check all permissions for actions > Copy token it and its your password. 
+
+
+
+
