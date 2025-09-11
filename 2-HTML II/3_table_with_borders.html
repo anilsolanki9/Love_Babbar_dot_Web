@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Table with Borders</title>
+        <style>
+            /* Normal Borders */
+            table,
+            td,
+            tr {
+                border: 2px solid black;
+            }
+            table {
+                border-collapse: separate; /*default*/
+            }
+        </style>
+    </head>
+    <body>
+        <table id="myTable">
+            <caption>
+                Monthly Savings Table
+            </caption>
+            <tr>
+                <td>Month</td>
+                <td>Saving</td>
+            </tr>
+            <tr>
+                <td>Jan</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Fab</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Mar</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>900</td>
+            </tr>
+        </table>
+        <br />
+        <button id="toggleBtn" onclick="collapse()">Border Collapse</button>
+        <script>
+            function collapse() {
+                let table = document.getElementById('myTable');
+                let btn = document.getElementById('toggleBtn');
+
+                if (table.style.borderCollapse === 'collapse') {
+                    table.style.borderCollapse = 'separate';
+                    btn.textContent = 'Border Collapse';
+                } else {
+                    table.style.borderCollapse = 'collapse';
+                    btn.textContent = 'Border Separate';
+                }
+            }
+        </script>
+    </body>
+</html>

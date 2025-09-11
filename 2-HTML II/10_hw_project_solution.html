@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Table Hw</title>
+        <style>
+            table,
+            th,
+            td,
+            tr {
+                border: 2px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            tr {
+                height: 30px;
+            }
+            .yellow {
+                background-color: rgb(250, 250, 198);
+            }
+            .blue {
+                background-color: rgb(158, 158, 239);
+            }
+            .green {
+                background-color: rgb(200, 255, 200);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Table Hw Solution</h1>
+        <table>
+            <tr>
+                <th rowspan="3">Day</th>
+                <th colspan="3">Seminar</th>
+            </tr>
+            <tr>
+                <th colspan="2">Schedule</th>
+                <th rowspan="2">Topic</th>
+            </tr>
+            <tr>
+                <th>Begin</th>
+                <th>End</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Monday</td>
+                <td rowspan="2" class="yellow">8:00 a.m.</td>
+                <td rowspan="2" class="blue">5:00 p.m.</td>
+                <td>Introduction to XML</td>
+            </tr>
+            <tr>
+                <td>Validity: DTD and Relax NG</td>
+            </tr>
+            <tr>
+                <td rowspan="4">Tuesday</td>
+                <td class="yellow">8:00 a.m.</td>
+                <td class="yellow">11:00 a.m.</td>
+                <td rowspan="2">XPath</td>
+            </tr>
+            <tr style="height: 15px">
+                <td rowspan="2" class="yellow">11:00 a.m.</td>
+                <td rowspan="2" class="green">2:00 p.m.</td>
+            </tr>
+            <tr style="height: 15px">
+                <td rowspan="2">XSL Transformations</td>
+            </tr>
+            <tr>
+                <td class="green">2:00 p.m.</td>
+                <td class="blue">5:00 p.m.</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td class="yellow">8:00 a.m.</td>
+                <td class="green">12:00 p.m.</td>
+                <td>XSL Formatting Objects</td>
+            </tr>
+        </table>
+        <br />
+        <h2>Homework image</h2>
+        <img src="./9_Hw_Project.png" alt="This is the image of homework given By Love Babbar" width="430" />
+        <br />
+        <br />
+        <br />
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modern Table Using AI</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: #f7f9fc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 400px;
+                text-align: center;
+                box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+                border-radius: 12px;
+                overflow: hidden;
+                background: white;
+                transition: 0.3s ease-in-out;
+            }
+
+            table:hover {
+                transform: scale(1.02);
+                box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+            }
+
+            caption {
+                caption-side: bottom;
+                font-weight: 600;
+                color: #333;
+                margin-top: 10px;
+            }
+
+            thead {
+                background: linear-gradient(135deg, #4facfe, #00f2fe);
+                color: white;
+            }
+
+            thead th {
+                padding: 12px;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+            }
+
+            tbody td {
+                padding: 12px;
+                font-size: 15px;
+                background-color: #fefefe;
+                transition: 0.2s;
+            }
+
+            tbody tr:nth-child(even) td {
+                background-color: #f7fbff;
+            }
+
+            tbody tr:hover td {
+                background-color: #eaf6ff;
+                cursor: pointer;
+            }
+
+            tfoot {
+                background: #ffeaa7;
+                font-weight: bold;
+            }
+
+            tfoot td {
+                padding: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>
+                💰 My Savings 💰
+            </caption>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Saving</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jan</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Feb</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>Mar</td>
+                    <td>400</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>900</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
