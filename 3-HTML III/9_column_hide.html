@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hw Solution colgroup</title>
+        <style>
+            table,
+            td,
+            th,
+            tr {
+                border: 2px solid black;
+                border-collapse: collapse;
+                font-family: 'Roboto', sans-serif;
+            }
+            td,
+            th {
+                padding: 6px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Change Background Color of Column 2, 3 an 4 to Yellow</h1>
+        <table>
+            <colgroup>
+                <col span="" />
+                <!-- default value of span is 1-->
+                <col span="1" style="background-color: red" />
+                <col span="" />
+                <col span="1" style="background-color: red" />
+                <!-- To hide Fifth Column we add style="visibility: collapse;"" here in c<ol /> -->
+                <col span="1" style="visibility: collapse" />
+                <!-- To hide a row, add the same style to <tr> tag -->
+            </colgroup>
+            <tr>
+                <td>COl 1</td>
+                <td>Col 2</td>
+                <td>Col 3</td>
+                <td>Col 4</td>
+                <td>Col 5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr style="visibility: collapse">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </table>
+    </body>
+</html>
