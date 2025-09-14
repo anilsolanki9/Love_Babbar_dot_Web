@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Div</title>
+        <style>
+            #green {
+                background-color: green;
+                color: white;
+            }
+            #blue {
+                background-color: blue;
+                color: white;
+            }
+            .block {
+                display: block;
+            }
+            .inline {
+                display: inline;
+            }
+            #use,
+            #usespan {
+                border: 5px solid red;
+                text-align: center;
+            }
+            #use > p {
+                padding: 10px;
+                text-align: center;
+            }
+            #brand {
+                font-size: 100px;
+                color: firebrick;
+                font-family: 'Lavishly Yours', cursive;
+            }
+        </style>
+    </head>
+    <body>
+        <div>This is first Div</div>
+        <div>This is second Div, div dont have any pre css (except display: block;)</div>
+        <p>This is first para, para have pre styles css margin for top and bottom</p>
+        <p>This is second para</p>
+        <div id="green">Green Div</div>
+        <div id="blue">Blue Div</div>
+        <p id="green">Green Para</p>
+        <p id="blue">Blue Para</p>
+        <span id="green">This is green span</span>
+        <span id="blue">This is blue span</span>
+        <span id="green" class="block">This is green span, but with display: block; </span>
+        <div id="green" class="inline">Green Div, but with display:inline;</div>
+        <div id="blue" class="inline">Blue Div, but with display:inline;</div>
+        <br />
+        <br />
+        <div id="use">
+            <h2>Use of Div</h2>
+            <img src="./2.0_Dennis_Ritchie.png" width="300px" />
+            <p>
+                Div tag is used as a generic container, it is a block level element. <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, obcaecati?
+            </p>
+        </div>
+        <br />
+        <div id="usespan">
+            <h2>Use of Span</h2>
+            <p>This is my <span id="brand">Brand</span></p>
+        </div>
+    </body>
+</html>

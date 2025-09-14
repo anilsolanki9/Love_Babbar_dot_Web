@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Styles CheatSheet</title>
+        <style>
+            /*
+            • Font-Family: Specifies the font family of the text.
+            • Font: A shorthand property for specifying the font-style, font variant, font-weight, font-size/line-height, and font-family properties all at once.
+            • Font-Size: Specifies the font size of the text.
+            • Font-Weight: Specifies the weight of a font.
+            • Font-Style: Specifies the font style of the text.
+            • Font-Variant: Specifies whether or not the text is displayed in a small-caps font.
+             */
+            #first-para {
+                font-family: Times, serif, Arial, Helvetica, sans-serif;
+                font: 15px Helvetica, sans-serif, Arial;
+                font-size: 15px;
+                font-weight: bold;
+                font-style: italic;
+                font-variant: small-caps;
+            }
+            /*
+            • Text-Align: It specifies the horizontal alignment of text.
+            • Text-Decoration: It specifies the decoration added to text.
+            • Letter-Spacing: It increases or decreases the space between characters in a text.
+            • Text-Transform: It controls the capitalization of text.
+            • Word-Spacing: It increases or decreases the space between words in a text.
+            • Text-Indent: It specifies the indentation of the first line in a text-block.
+            • Line-Height: It sets the line height.
+            • Text-Shadow: It adds shadow to the text.
+            */
+            #second-para {
+                text-align: center;
+                text-decoration: underline;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                word-spacing: 8px;
+                text-indent: 40px;
+                line-height: 40px;
+                text-shadow: 4px 4px 7px rgb(128, 40, 184);
+            }
+            /*
+            • Background-Image: It specifies one or more background images for an element.
+            • Background-Size: It specifies the size of the background images.
+            • Background-Position: It specifies the position of a background image.
+            • Background-Repeat: It sets, how a background image will be repeated.
+            • Background-Color: It specifies the background color of an element.
+            • Background-Attachment: It sets whether a background image scrolls with the rest of the page, or is fixed.
+            • Background-Origin: It specifies the origin position of a background image.
+            • Background: A shorthand property for all the background-* properties.
+            */
+            #background {
+                background-image: url('./dev.png');
+                background-size: 100px; /* width height */
+                background-position: center;
+                background-repeat: repeat;
+                /* background-color: #ffffff; */
+                background-attachment: fixed;
+                /* background-origin: content-box; */
+                /* background: url(''); */
+            }
+            /*
+            • Border-Width: It sets the width of the four borders.
+            • Border-Style: It sets the style of the four borders.
+            • Border-Radius: A shorthand property for the four border-*- radius properties.
+            • Border-Color: It sets the color of the four borders.
+            • Border: A shorthand property for border-width, border-style and border-color.
+            • Border-Spacing: It sets the distance between the borders of adjacent cells.
+            */
+            #border-box {
+                border-width: 4px;
+                border-style: solid;
+                border-radius: 4px;
+                border-color: #000000;
+                /* border: 20px dotted coral; */
+                border-spacing: 20px;
+            }
+            /*
+            • Padding: A shorthand property for all the padding-* properties.
+            • Visibility: It specifies whether or not an element is visible.
+            • Display: It specifies how a certain HTML element should be displayed.
+            • Height: It sets the height of an element.
+            • Width: It sets the width of an element.
+            • Float: It specifies whether an element should float to the left, right, or not at all.
+            • Clear: It specifies what should happen with the element that is next to a floating element.
+            • Margin: It sets all the margin properties in one declaration.
+            • Overflow: It specifies what happens if content overflows an element's box.
+            */
+            #box-model {
+                border: 4px solid black;
+                padding: 10px 20px 10px 20px;
+                /* visibility: hidden; */
+                display: inline-block;
+                height: 100px;
+                width: 400px;
+                /* float: right; */
+                clear: left;
+                margin: 20px 10px 20px 10px;
+                overflow: scroll;
+            }
+            /*
+            • Color: It sets the color of text.
+            • Outline-Color: It sets the color of an outline.
+            • Caret-Color: It specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable.
+            • Opacity: It sets the opacity level for an element
+            */
+            #color-css {
+                color: rgb(70, 120, 158);
+                outline-width: 10px;
+                outline-style: solid;
+                outline-color: rgba(130, 5, 233, 0.5);
+                caret-color: coral;
+                /* caret-shape:underscore; */
+                opacity: 0.8;
+            }
+            /*
+            • Box-Align: It specifies how an element aligns its contents across its layout in a perpendicular direction.
+            • Box-Direction: It specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge).
+            • Box-Flex: This property specifies how a box grows to fill the box that contains it, in the direction of the containing box's layout.
+            • Box-Orient: It sets whether an element lays out its contents horizontally or vertically.
+            • Box-Sizing: It allows us to include the padding and border in an element's total width and height.
+            • Box-Pack: This property specifies how a box packs its contents in the direction of its layout.
+            • Min-Width: It sets the minimum width of an element.
+            • Max-Width: It sets the maximum width of an element.
+            • Min-Height: It sets the minimum height of an element.
+            • Max-Height: It sets the maximum height of an element.
+            */
+            #layout {
+                box-align: start;
+                box-direction: normal;
+                box-flex: normal;
+                box-orient: inline;
+                box-sizing: margin-box;
+                box-pack: justify;
+                min-width: 200px;
+                max-width: 400px;
+                min-height: 100px;
+                max-height: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>FONT PROPERTIES IN CSS</h2>
+        <h1>This Page is About CSS Styles</h1>
+        <p id="first-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, hic magni praesentium voluptatibus eum ipsam facilis odit iste maiores debitis ab! Voluptatibus maxime facilis minus dicta sequi aliquam molestiae. Ab, blanditiis. Ipsa ut aspernatur tenetur officia eligendi esse eaque, culpa voluptate accusantium veritatis aperiam cupiditate consequatur ipsum harum dolorem accusamus.</p>
+        <h2>TEXT PROPERTIES IN CSS</h2>
+        <p id="second-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsa at distinctio voluptatem sed, dicta quos hic quo quaerat voluptate dignissimos vero porro eaque? Molestiae animi repudiandae amet iusto perferendis quisquam quo accusamus quidem laborum. Minima quam reprehenderit nobis vitae quidem nemo labore! Molestias, enim velit. Tenetur, atque obcaecati.</p>
+        <h2>BACKGROUND PROPERTIES IN CSS</h2>
+        <div id="background">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos eos fugiat corporis inventore natus qui modi magnam? Deleniti et facere illo porro alias possimus saepe debitis tempore accusantium provident nisi cum expedita, officia consequuntur reiciendis earum praesentium, quo laudantium esse excepturi? Consectetur impedit eveniet harum obcaecati cupiditate sunt! Cumque, doloribus accusantium. Praesentium, harum! Quo non cumque quod iure doloremque!</div>
+        <br />
+        <h2>BORDERS PROPERTIES IN CSS</h2>
+        <div id="border-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem quisquam laudantium vel illo corporis consequuntur accusamus doloremque dignissimos consectetur quia labore atque in, vitae, aspernatur eum similique ex vero ut amet minima. Delectus incidunt quo officia fugit! Consequatur doloribus praesentium id porro officia debitis animi quo error doloremque minus?</div>
+        <br />
+        <h2>BOX MODEL PROPERTIES IN CSS</h2>
+        <div id="box-model">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur voluptatum quod laborum magnam doloribus excepturi aspernatur. Eveniet, consectetur, est culpa reprehenderit laborum porro blanditiis dolor natus odit, repellat suscipit. Quia nisi, repudiandae hic natus ad quos debitis labore cum alias suscipit vel neque accusantium quibusdam sapiente officiis ducimus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae pariatur totam minima animi eveniet ratione aut corporis repudiandae architecto molestias, mollitia, nihil aliquid, reprehenderit omnis! Dolores, mollitia. Eum maiores, nam incidunt nostrum aliquid rem. Mollitia id doloribus distinctio voluptatum repellendus atque voluptate maxime, velit nisi minus, natus sapiente ullam eaque odit necessitatibus consequuntur dicta! Nobis sunt aliquid tempore pariatur cum, placeat alias quibusdam sit in assumenda et qui, reiciendis ad est eius enim esse, modi soluta? Possimus deserunt repellat velit. Et sapiente eveniet hic cum sit iure sint? Amet repellat voluptates impedit ab dolores laborum sint quod dignissimos odio nisi.</div>
+        <br />
+        <h2>COLORS PROPERTIES IN CSS</h2>
+        <div id="color-css">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, animi!</div>
+        <br />
+        <h2>LAYOUT PROPERTIES IN CSS</h2>
+        <div id="layout">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae deleniti assumenda dolores iure dignissimos perspiciatis, error numquam in totam atque ratione debitis possimus ipsum dolorem, illum magnam nisi modi quae?</div>
+    </body>
+</html>

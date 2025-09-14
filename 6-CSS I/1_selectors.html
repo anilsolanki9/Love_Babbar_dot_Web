@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Selectors</title>
+        <style>
+            /* Element Selector / Tag Selector / Type selector */
+            /* p {
+                background-color: aqua;
+                color: brown;
+            } */
+            /* Class Selector */
+            /* .green {
+                color: green;
+            }
+            .blue {
+                color: blue;
+            } */
+            /* Task */
+            /* .small {
+                font-size: small;
+            }
+            .big {
+                font-size: larger;
+            } */
+            /* ID Selector */
+            /* .box {
+                border: 2px solid black;
+                height: 200px;
+                width: 400px;
+                margin-bottom: 20px;
+            }
+            #org {
+                background-color: orange;
+            }
+            #wht {
+                background-color: white;
+            }
+            #grn {
+                background-color: green;
+            } */
+            /* Pseudo Class Selector */
+            /* #pseudo-link:hover {
+                color: gold;
+                background-color: rgb(35, 28, 35);
+                font-size: 50px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            } */
+            /* universal selector */
+            /* * {
+                color: red;
+                background-color: blue;
+            } */
+            /* Nested selectors */
+            /* #nested div p {
+                color: red;
+            }
+            #nested > p {
+                color: blue;
+            }
+            #nested p span {
+                color: orange;
+            } */
+            /* Attribute selector */
+            /* p.para-c#second {
+                color: red;
+            } */
+            /* Multiple selector */
+            p,
+            h2,
+            h6,
+            div {
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div id="element">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim?</p>
+        </div> -->
+        <!-- <div id="class">
+            <p class="green">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, expedita?</p>
+            <p class="green">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, expedita?</p>
+            <p class="blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, expedita?</p>
+            <p class="green">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, expedita?</p>
+            <p class="blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, expedita?</p>
+        </div> -->
+        <!-- Group h1 h2 h3 and set font-size: small, group h4 h5 h6 and set font-size: larger -->
+        <!-- <div id="task">
+            <h1 class="small">Lorem ipsum dolor sit amet.</h1>
+            <h2 class="small">Lorem ipsum dolor sit amet.</h2>
+            <h3 class="small">Lorem ipsum dolor sit amet.</h3>
+            <h4 class="big">Lorem ipsum dolor sit amet.</h4>
+            <h5 class="big">Lorem ipsum dolor sit amet.</h5>
+            <h6 class="big">Lorem ipsum dolor sit amet.</h6>
+        </div> -->
+        <!-- <div id="id">
+            <div class="box" id="org">A</div>
+            <div class="box" id="wht">B</div>
+            <div class="box" id="grn">B</div>
+        </div> -->
+        <!-- <div id="pseudo">
+            <a href="https://www.google.com">Google Normal</a> <br /><br />
+            <a id="pseudo-link" href="https://www.google.com">Google Hover</a> <br />
+        </div> -->
+        <!-- <div id="universal">
+            <h1>Lorem ipsum dolor sit.</h1>
+            <p>Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, assumenda.</p>
+            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium libero tenetur in!</div>
+        </div> -->
+        <!-- <div id="nested">
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, asperiores.</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet. <span>Lorem, <b>ipsum</b> dolor.</span></p>
+        </div> -->
+        <!-- <div id="attribute">
+            <p class="para-c">Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="para-c" id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eveniet!</p>
+        </div> -->
+        <div id="multiple">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h6>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit.</div>
+        </div>
+    </body>
+</html>

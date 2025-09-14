@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Coder Portfolio</title>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            /* 🌟 Reset & Base Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                background: #f5f7fa;
+                color: #333;
+                line-height: 1.6;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            /* 🌟 Header */
+            header {
+                background: linear-gradient(135deg, #1f1f1f, #3b3b3b);
+                color: white;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            }
+            nav {
+                max-width: 1200px;
+                margin: auto;
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #logo {
+                height: 50px;
+                border-radius: 8px;
+            }
+            .nav-links {
+                display: flex;
+                gap: 1.5rem;
+            }
+            .nav-links a {
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+            .nav-links a:hover {
+                color: #00d9ff;
+            }
+
+            /* 🌟 Hero Section */
+            .hero {
+                max-width: 1200px;
+                margin: auto;
+                padding: 3rem 2rem;
+                text-align: center;
+            }
+            #hero-img {
+                width: 160px;
+                border-radius: 50%;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+            #hero-para {
+                font-size: 2rem;
+                margin: 1rem 0;
+                font-weight: bold;
+                color: #222;
+            }
+
+            /* 🌟 Main Layout */
+            main {
+                max-width: 1200px;
+                margin: auto;
+                padding: 2rem;
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                gap: 2rem;
+            }
+            aside {
+                background: #fff;
+                padding: 1rem;
+                border-left: 4px solid #007bff;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            }
+            main p {
+                background: #fff;
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            /* 🌟 Sections General */
+            section {
+                max-width: 1200px;
+                margin: auto;
+                padding: 2rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+                color: #007bff;
+                text-align: center;
+            }
+
+            /* 🌟 Skills & Education */
+            .grid-cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+            .card {
+                background: #fff;
+                padding: 1.5rem;
+                border-radius: 12px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            .card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+            .card h3 {
+                margin-bottom: 0.8rem;
+                color: #333;
+            }
+            ul {
+                list-style: none;
+            }
+            ul li {
+                padding: 0.5rem 0;
+                border-bottom: 1px solid #eee;
+            }
+
+            /* 🌟 Projects */
+            .projects {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 2rem;
+            }
+            .project-card {
+                background: #fff;
+                padding: 1.5rem;
+                border-radius: 12px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+                transition: 0.3s;
+            }
+            .project-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+            .project-card h3 {
+                margin-bottom: 0.5rem;
+            }
+            .project-card p {
+                font-size: 0.95rem;
+            }
+
+            /* 🌟 Hobbies */
+            .hobbies {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+            .hobby {
+                background: #007bff;
+                color: #fff;
+                padding: 1rem 1.5rem;
+                border-radius: 50px;
+                font-weight: 500;
+                transition: 0.3s;
+            }
+            .hobby:hover {
+                background: #0056b3;
+            }
+
+            /* 🌟 Footer */
+            footer {
+                background: #1f1f1f;
+                color: #ddd;
+                padding: 2rem;
+                margin-top: 2rem;
+            }
+            footer p {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            address {
+                font-style: normal;
+                margin: 1rem 0;
+                text-align: center;
+            }
+            footer a {
+                color: #00d9ff;
+                display: inline-block;
+                margin: 0.25rem 0;
+            }
+            textarea {
+                width: 100%;
+                padding: 0.75rem;
+                border-radius: 8px;
+                border: none;
+                margin-top: 0.5rem;
+                resize: none;
+                font-family: inherit;
+            }
+            textarea:focus {
+                outline: 2px solid #00d9ff;
+            }
+
+            /* 🌟 Responsive */
+            @media (max-width: 768px) {
+                nav {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+                .nav-links {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                main {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 🌟 Header -->
+        <header>
+            <nav>
+                <div class="brand">
+                    <img id="logo" src="./4.0_logo.png" alt="Logo" />
+                    <h2 id="main-heading">Coder</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#hobbies">Hobbies</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- 🌟 Hero -->
+        <section class="hero" id="about">
+            <img id="hero-img" src="./4.0_logo.png" alt="Profile Photo" />
+            <p id="hero-para">Hi, I am Coder 👨‍💻</p>
+        </section>
+
+        <!-- 🌟 Main -->
+        <main>
+            <p>Welcome to my portfolio! I am passionate about coding, learning new technologies, and building awesome projects. Here you will find my skills, education, hobbies, and the work I’ve done so far.</p>
+            <aside>
+                <p>Quick Note: This portfolio is constantly being updated with new projects and learnings 🚀.</p>
+            </aside>
+        </main>
+
+        <!-- 🌟 Skills -->
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5, CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React (Basics)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>APIs</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Other Tools</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌟 Education -->
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>Bachelor of Computer Applications</h3>
+                    <p>BCA, University XYZ, 2023 - 2026</p>
+                </div>
+                <div class="card">
+                    <h3>12th Grade</h3>
+                    <p>Science (PCM) – 2022</p>
+                </div>
+                <div class="card">
+                    <h3>10th Grade</h3>
+                    <p>Completed in 2020</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌟 Projects -->
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal website built with HTML, CSS, and JavaScript showcasing my skills and projects.</p>
+                </div>
+                <div class="project-card">
+                    <h3>To-Do App</h3>
+                    <p>A task management app with features like add, delete, and mark tasks complete using JavaScript.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Blog Platform</h3>
+                    <p>A simple blogging site where users can create, edit, and read posts.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Learning Management System (Future)</h3>
+                    <p>An upcoming project where I’ll build a full-stack LMS to manage courses and students.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌟 Hobbies -->
+        <section id="hobbies">
+            <h2 class="section-title">Hobbies</h2>
+            <div class="hobbies">
+                <span class="hobby">🎸 Playing Guitar</span>
+                <span class="hobby">📖 Reading Books</span>
+                <span class="hobby">🧑‍💻 Coding Challenges</span>
+                <span class="hobby">🎮 Gaming</span>
+                <span class="hobby">✈️ Travelling</span>
+            </div>
+        </section>
+
+        <!-- 🌟 Footer -->
+        <footer id="contact">
+            <p>&copy; 2025 Anil_Coder | All Rights Reserved</p>
+            <p><b>Contact Me</b></p>
+            <address>
+                <a href="tel:+918176363535">📞 Call Me</a> <br />
+                <a href="mailto:support@gmail.com">📧 Mail Me</a><br />
+            </address>
+            <p><b>Send Me a Message</b></p>
+            <form action="./script.json">
+                <label for="textmessage">Your Message</label><br />
+                <textarea name="message" id="textmessage" placeholder="Enter Your Message..." rows="5"></textarea>
+            </form>
+        </footer>
+    </body>
+</html>

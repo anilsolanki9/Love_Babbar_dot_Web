@@ -1,0 +1,6 @@
+p {
+    font-weight: 100;
+}
+p:hover {
+    color: white;
+}
