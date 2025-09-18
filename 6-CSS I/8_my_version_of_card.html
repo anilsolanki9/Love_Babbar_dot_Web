@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Card</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Geist&display=swap" rel="stylesheet" />
+
+        <style>
+            body {
+                font-family: 'Geist', sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 900;
+                /* font-style: normal; */
+                background-image: url(./assets/background2.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100% auto;
+            }
+            .container {
+                padding: 10px;
+                width: 350px;
+                height: 320px;
+                border: 1px solid rgb(180, 180, 180);
+                border-radius: 15px;
+                margin: auto;
+                backdrop-filter: blur(15px);
+            }
+            .card {
+                width: 350px;
+                height: 350px;
+            }
+            #card-img {
+                width: 100%;
+                border-radius: 8px;
+            }
+            #title {
+                font-size: 23px;
+                margin: 10px 0;
+            }
+            hr {
+                width: 70%;
+                margin-left: 0;
+                border: 1px solid rgb(190, 190, 190);
+            }
+            #pricing {
+                margin-top: 5px;
+            }
+            #current-price {
+                font-size: 20px;
+                margin-right: 4px;
+                color: rgb(96, 96, 227);
+            }
+            #old-price {
+                text-decoration: line-through;
+                color: rgb(107, 107, 107);
+                margin-right: 5px;
+            }
+            #discount {
+                background-color: rgb(52, 227, 136);
+                padding: 3px 5px;
+                box-sizing: border-box;
+                display: inline-block;
+                border-radius: 5px;
+                color: white;
+                font-weight: 500;
+                font-size: smaller;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Card HW</h1>
+        <br />
+        <div class="container">
+            <div class="card">
+                <img id="card-img" src="./assets/card_image.png" alt="Web development bootcamp Master MERN stack Web development @dot Batch" />
+                <p id="title">
+                    <strong
+                        >Web Development Master<br />
+                        Course @dot Batch</strong
+                    >
+                </p>
+                <hr />
+                <div id="pricing">
+                    <span id="current-price">&#8377;4500</span>
+                    <span id="old-price">&nbsp;&#8377;6999&nbsp;</span>
+                    <span id="discount">42% off</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

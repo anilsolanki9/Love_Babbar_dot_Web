@@ -1,0 +1,263 @@
+@font-face {
+    font-family: Nmachina;
+    src: url(./NeueMachina-Light.otf);
+    /* font-weight:900; */
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* navbar ki height ke barabar ya thoda zyada width pahle hi scrol stop kr deta h */
+}
+body {
+    background-color: #b6b09f;
+    color: 000000;
+    font-family: sans-serif;
+    margin: 0;
+}
+h1,
+h2 {
+    font-family: Nmachina;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 75px;
+}
+#title-p {
+    text-align: center;
+    margin-top: 0;
+    text-transform: capitalize;
+}
+#navbar {
+    height: 60px;
+    /* background-color: black; */
+    position: fixed;
+    top: 0;
+    width: 98.5%;
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid #ffffffb0;
+    box-shadow: inset 0px 0px 20px white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+#navbar:first-child {
+    padding-left: 20px;
+}
+.navitem {
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+    font-size: larger;
+    margin: 10px;
+}
+.navitem:hover {
+    /* text-decoration: underline; */
+    text-shadow: 1px 2px 20px rgb(255, 255, 255);
+    color: #000000;
+}
+figure {
+    margin: 30px auto;
+    text-align: center;
+}
+#fig-img {
+    width: 20%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(37, 37, 37, 0.507);
+}
+#fig-img:hover {
+    box-shadow: 0px 0px 30px rgba(37, 37, 37, 0.507);
+}
+figure > figcaption {
+    color: #363636;
+    padding-top: 5px;
+}
+li > * {
+    text-decoration: none;
+    color: #363636;
+}
+li > *:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+.indent {
+    margin-left: 10px;
+}
+
+/* Ai  quote */
+blockquote {
+    max-width: 700px;
+    margin: 30px 30px;
+    padding: 20px 30px;
+    background: #fdfdfdb0; /* halka translucent white */
+    border-left: 3px solid #444; /* quote ka ek style */
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1;
+    color: #222;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+blockquote q {
+    quotes: '“' '”' '‘' '’';
+}
+
+blockquote q:before {
+    content: open-quote;
+    font-size: 2rem;
+    color: #666;
+    vertical-align: -0.2em;
+    margin-right: 5px;
+}
+
+blockquote q:after {
+    content: close-quote;
+    font-size: 2rem;
+    color: #666;
+    margin-left: 5px;
+    vertical-align: -0.2em;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 0px;
+    text-align: right;
+    font-size: 1rem;
+    font-style: normal;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Footer css */
+#site-footer {
+    background: #222; /* dark footer */
+    color: #ddd; /* light text */
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    border-top: 3px solid #444;
+    font-size: 0.95rem;
+    font-family: Nmachina;
+}
+
+#site-footer p {
+    margin: 5px 0 15px;
+    /* font-style: italic; */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #4da6ff; /* link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #66ffcc; /* hover color */
+    text-decoration: underline;
+}
+
+/* ================== Responsive Design ================== */
+@media (max-width: 768px) {
+    /* Navbar stack ya compact */
+    #navbar {
+        height: 30px;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 15px;
+        border-radius: 0;
+    }
+
+    .navitem {
+        font-size: 1rem;
+        margin: 8px 10px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-top: 70px; /* thoda gap navbar ke liye */
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    #title-p {
+        font-size: 1.1rem;
+    }
+    .content-para {
+        text-align: justify;
+        margin: 0 20px;
+    }
+    /* Image ko bada dikhao */
+    #fig-img {
+        width: 30%;
+    }
+
+    /* Blockquote adjust */
+    blockquote {
+        margin: 15px;
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    blockquote q:before,
+    blockquote q:after {
+        font-size: 1.5rem;
+    }
+
+    /* Footer adjust */
+    #site-footer {
+        font-size: 0.85rem;
+        padding: 15px;
+    }
+    #resources {
+        margin: 20px 0 5px;
+    }
+    .resource-para {
+        text-align: center;
+        margin: 0 0;
+    }
+
+    #site-footer > p {
+        font-size: smaller;
+        margin: 0 70px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+        font-size: smaller;
+        margin: 0 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    #fig-img {
+        width: 65%;
+    }
+
+    .navitem {
+        font-size: 0.95rem;
+    }
+
+    blockquote {
+        font-size: 0.95rem;
+    }
+}

@@ -4,3 +4,10 @@ p {
 p:hover {
     color: white;
 }
+
+selector {
+    font: value1; /* first declaration*/
+    color: value2; /* second declaration */
+    /* …… */
+    border: valueN; /*8 Nth declaration */
+}

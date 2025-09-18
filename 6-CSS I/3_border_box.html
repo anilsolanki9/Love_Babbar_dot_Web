@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .outer {
+                width: 500px;
+                background-color: rgb(177, 204, 227);
+            }
+            .inner {
+                border: 2px solid black;
+            }
+            #box1 {
+                border: 4px solid red;
+                padding: 50px;
+            }
+            #box2 {
+                box-sizing: border-box;
+                border: 4px solid red;
+                padding: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>box-sizing</h1>
+        <h2>Default</h2>
+        <div class="outer" id="box1"><div class="inner">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem voluptas ipsum velit eum? Cum quas voluptatem earum laborum delectus dolorum error reprehenderit doloribus adipisci deserunt ab cupiditate non dignissimos rerum accusamus, molestias odit exercitationem ducimus natus corrupti autem quis. Magnam corrupti rerum voluptate voluptas inventore voluptatem vero, suscipit veritatis?</div></div>
+        <br />
+        <h2>box-sizing: border-box;</h2>
+        <div class="outer" id="box2"><div class="inner">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem voluptas ipsum velit eum? Cum quas voluptatem earum laborum delectus dolorum error reprehenderit doloribus adipisci deserunt ab cupiditate non dignissimos rerum accusamus, molestias odit exercitationem ducimus natus corrupti autem quis. Magnam corrupti rerum voluptate voluptas inventore voluptatem vero, suscipit veritatis?</div></div>
+    </body>
+</html>
