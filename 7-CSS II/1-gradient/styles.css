@@ -1,0 +1,47 @@
+.linear-gradient {
+    background-color: aquamarine;
+    height: 200px;
+    width: 300px;
+    /* background-image: linear-gradient(direction, color-stop1, color-stop2, ...); */
+    background-image: linear-gradient(rgb(236, 255, 140), rgb(169, 145, 255)); /* defalt top --> Bottom */
+    background-image: linear-gradient(to bottom, rgb(236, 255, 140), rgb(169, 145, 255)); /* defalt top --> Bottom */
+    background-image: linear-gradient(to top, rgb(236, 255, 140), rgb(169, 145, 255)); /* Bottom --> top */
+    background-image: linear-gradient(to right, rgb(236, 255, 140), rgb(169, 145, 255)); /* left --> right */
+    background-image: linear-gradient(to left, rgb(236, 255, 140), rgb(169, 145, 255)); /* right --> left */
+    background-image: linear-gradient(to top left, rgb(236, 255, 140), rgb(169, 145, 255)); /* bottom right --> top left */
+    background-image: linear-gradient(to top right, rgb(236, 255, 140), rgb(169, 145, 255)); /* bottom left --> top right */
+    background-image: linear-gradient(to bottom left, rgb(236, 255, 140), rgb(169, 145, 255)); /* top right --> bottom left */
+    background-image: linear-gradient(to bottom right, rgb(236, 255, 140), rgb(169, 145, 255)); /* top left --> bottom right */
+    /* more than 2 colored gradient */
+    background-image: linear-gradient(rgb(236, 255, 140), rgb(169, 145, 255), rgb(159, 246, 159));
+    /* hradient Using degree */
+    background-image: linear-gradient(45deg, rgb(236, 255, 140), rgb(169, 145, 255), rgb(159, 246, 159));
+    /* specifying % allotment to every color  */
+    background-image: linear-gradient(orange 0%, white 40% 60%, green 100%);
+    background: linear-gradient(90deg in oklab, blue, red); /*more smooth gradient, kind of whitish mixing of colors */
+    background-image: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.radial-gradient {
+    background-color: aquamarine;
+    height: 200px;
+    width: 300px;
+    background: radial-gradient(#e66465, #9198e5);
+    background: radial-gradient(closest-side, #ebf8e1, #f69d3c);
+    background: radial-gradient(circle at 50%, #000000, #373737 50%, #ffffff 75%, #333333 75%);
+    background: radial-gradient(ellipse at top, #da9aff, transparent), radial-gradient(ellipse at bottom, #cbf4ff, transparent), radial-gradient(ellipse at left, #ffd2d2, transparent), radial-gradient(ellipse at right, #d6ceff, transparent);
+}
+.conic-gradient {
+    background-color: aquamarine;
+    height: 200px;
+    width: 300px;
+    background: conic-gradient(red, orange, yellow, green, blue);
+    background: repeating-conic-gradient(red 0deg 90deg, yellow 90deg 180deg);
+    background: conic-gradient(orange 0deg 120deg, rgb(255, 59, 59) 120deg 240deg, green 240deg 360deg);
+    background: conic-gradient(from 90deg, cyan, magenta, yellow, cyan);
+    background: conic-gradient(from 0.25turn at 50% 30%, #f69d3c, 10deg, #3f87a6, 350deg, #ebf8e1);
+    /* from sets the start point 0.25turn == 90deg, 0turn == 0deg */
+    /* at defides the position of center, default is 50% 50%, first for horizontal, second for vertical */
+    /* 50% 30% means 50% of X, and 30% of Y */
+    /* orange runs from 0 to 10deg, because next (empty) color starts and ends at 10deg, next color bluish starts from 10deg and ends at 350deg. last color is whitish is from 350deg to 360deg. */
+}

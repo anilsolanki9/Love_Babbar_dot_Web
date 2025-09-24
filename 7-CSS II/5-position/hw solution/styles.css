@@ -1,0 +1,38 @@
+.wrapper {
+    position: relative;
+    width: 100vw;
+    height: 10000px;
+    border: 2px solid black;
+}
+img {
+    width: 700px;
+    height: 400px;
+}
+div {
+    color: white;
+}
+#tl {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+#tr {
+    position: absolute;
+    top: 2px;
+    left: 633px;
+}
+#bl {
+    position: absolute;
+    top: 375px;
+    left: 5px;
+}
+#br {
+    position: absolute;
+    top: 375px;
+    left: 612px;
+}
+#c {
+    position: absolute;
+    top: 175px;
+    left: 333px;
+}

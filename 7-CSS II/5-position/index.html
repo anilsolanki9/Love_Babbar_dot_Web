@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Position</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <h1>Position Properties</h1>
+        <div class="wrapper">
+            <div id="box1">
+                Box 1 Static
+                <pre>
+    position: static;
+    top: 100px;
+    /* top will not work */
+                </pre>
+            </div>
+            <div id="box2">
+                Box 2 Relative
+                <pre>
+    position: relative;
+    top: 150px;
+    left: 500px;
+</pre
+                >
+            </div>
+            <div id="box3">
+                Box 3 Fixed
+                <pre>
+    position: fixed;
+    /* z index become 1,
+    and remain fixed  */
+</pre
+                >
+            </div>
+            <div id="box4">
+                Box 4 Absolute
+                <pre>
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    /* relative to nearest
+    positioned ancestor or
+    body */
+</pre
+                >
+            </div>
+            <div id="box5">
+                Box 5 Sticky
+                <pre>
+    position: sticky;
+    top: 300px;
+    left: 400px;
+    /* toggle between
+    relative and fixed */
+    /* relative at normal
+    state, fixed after
+    scroll */
+</pre
+                >
+            </div>
+        </div>
+    </body>
+</html>
